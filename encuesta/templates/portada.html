@@ -1,0 +1,20 @@
+<html>
+<head></head>
+<body>
+<table>
+    <tr>
+        <td>{{ obj.participante1.nombre }}</td>
+        <td>{{ obj.participante2.nombre }}</td>
+    </tr>
+    <tr>
+        <td><img src="{{ obj.participante1.foto.url }}" width="100"/> </td>
+        <td><img src="{{ obj.participante2.foto.url }}" width="100"/> </td>
+
+    </tr> <tr>
+        <td><a href="{{ obj.participante1.get_absolute_url }}">Votar por {{ obj.participante1 }}</a> </td>
+        <td><a href="{% url votar obj.participante2.id %}">Votar por {{ obj.participante2 }}</a> </td>
+
+    </tr>
+</table>
+</body>
+</html>
